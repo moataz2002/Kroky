@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .gif-container {
+            width: 414px; /* Adjusted width */
+            height: 896px; /* Adjusted height */
+            overflow: hidden;
+        }
+        .gif, .still {
+            width: 414px; /* Adjusted width */
+            height: 896px; /* Adjusted height */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img class="gif" src="./gif/6.gif" style="display:block;">
+        <img class="still" src="./image/6.jpg" style="display:none;">
+    </div>
+
+    <script>
+        // Swap the GIF with a still image after 5 seconds
+        setTimeout(function() {
+            document.querySelector('.gif').style.display = 'none';
+            document.querySelector('.still').style.display = 'block';
+        }, 5000);
+    </script>
+</body>
+</html>
